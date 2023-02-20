@@ -3,7 +3,7 @@ on:
   push:
     branches: 
       - master 
-env:
+env: 
   armorCode_projectName: 'demo-project-aws'
   armorCode_MicroserviceName: 'demo-microservice-aws'
   
