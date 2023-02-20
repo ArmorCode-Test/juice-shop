@@ -1,7 +1,7 @@
 name: Snyk-ArmorCode GitHub Action
 on:
   push:
-    branches: 
+    branches:
       - master 
 env: 
   armorCode_projectName: 'demo-project-aws'
