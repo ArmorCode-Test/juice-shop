@@ -1,0 +1,15 @@
+name: Snyk-ArmorCode GitHub Action
+on:
+  push:
+    branches:
+      - master 
+env: 
+  armorCode_projectName: 'demo-project-aws'
+  armorCode_MicroserviceName: 'demo-microservice-aws'
+  
+jobs:
+  Snyk-Scan:
+    runs-on: [ self-hosted, Linux, X64 ]
+    steps:
+      - name: Snyk-Scan
+        run: python3 /home/ec2-user/scripts/import_scan.py --githubProjectName ${{ github.event.repository.name  }} --githubOrg ${{ github.repository_owner }}  --armorcodeProductName ${{env.armorCode_projectName}} --armorcodeSubProductName ${{env.armorCode_MicroserviceName}}
